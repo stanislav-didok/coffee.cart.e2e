@@ -41,7 +41,7 @@ test('товар зі знижкою не додається якщо додат
   await page.getByRole('button', { name: 'Add one Americano' }).click();
 });
 
-test('товар зі знижкою додається у корзині навіть якщо не додати звичайні товари', async ({ page }) => {
+test('товар зі знижкою додається "+" у корзині навіть якщо не додати звичайні товари', async ({ page }) => {
   await page.goto('https://coffee-cart.app/');
   await page.locator('[data-test="Espresso_Macchiato"]').click();
   await page.locator('[data-test="Flat_White"]').click();
