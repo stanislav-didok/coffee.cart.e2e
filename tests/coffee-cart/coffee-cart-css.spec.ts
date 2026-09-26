@@ -4,7 +4,7 @@ test('проведення звичайного замовлення', async ({ 
   await page.goto('');
   await page.locator('[data-test="Espresso"]').click();
   await page.locator('[data-test="Americano"]').click();
-  await page.locator('button', { hasText: 'Total' }).click();
+  await page.locator('button.pay').click();
   await page.locator('#name').fill('Stanislav Test');
   await page.locator('#email').fill('test@gm.com');
   await page.locator('#submit-payment').click();
@@ -17,7 +17,7 @@ test('проведення замовлення з додатковим това
   await page.locator('[data-test="Espresso_Con Panna"]').click();
   await page.locator('[data-test="Americano"]').click();
   await page.locator('button.yes').click();
-  await page.locator('button', { hasText: 'Total' }).click();
+  await page.locator('button.pay').click();
   await page.locator('#name').fill('Stanislav Test');
   await page.locator('#email').fill('test@gm.com');
   await page.locator('#promotion').check();
@@ -31,6 +31,8 @@ test('товар зі знижкою все ще у корзині після в
   await page.locator('button.yes').click();
   await page.locator('a[href="/cart"]').click();
   await page.locator('button[aria-label="Remove all Espresso"]').click();
+  await expect(page.locator('ul:not(.cart-preview) > li.list-item > div:first-child')).toBeVisible();
+
 });
 
 test('товар зі знижкою не додається якщо додати товари у корзині', async ({ page }) => {
@@ -38,6 +40,8 @@ test('товар зі знижкою не додається якщо додат
   await page.locator('[data-test="Americano"]').click();
   await page.locator('a[href="/cart"]').click();
   await page.locator('ul:not(.cart-preview) button[aria-label="Add one Americano"]').click({ clickCount: 2 });
+  await expect(page.locator('li.list-header > div:nth-child(2)')).toHaveText('Unit');
+
 });
 
 test('товар зі знижкою додається "+" у корзині навіть якщо не додати звичайні товари', async ({ page }) => {
@@ -48,4 +52,5 @@ test('товар зі знижкою додається "+" у корзині н
   await page.locator('button.yes').click();
   await page.locator('a[href="/cart"]').click();
   await page.locator('ul:not(.cart-preview) button[aria-label="Add one (Discounted) Mocha"]').click();
+  await expect(page.locator('div:has(> .unit-controller button[aria-label="Add one (Discounted) Mocha"]) > span.unit-desc')).toHaveText('$4.00 x 2');
 });
