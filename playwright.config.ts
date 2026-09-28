@@ -30,13 +30,28 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    actionTimeout: 30 * 1000
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'coffee-cart',
+      testDir: 'tests/coffee-cart',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: "https://coffee-cart.app/",
+        testIdAttribute: "data-test",
+      },
+    },
+    {
+      name: 'aria-attributes',
+      testDir: 'tests/aria-attributes',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'http://104.168.59.50/laboratory/aria/',
+        testIdAttribute: 'data-test',
+      },
     },
 
     // {
