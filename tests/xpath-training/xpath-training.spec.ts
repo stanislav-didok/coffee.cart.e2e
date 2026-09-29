@@ -17,8 +17,11 @@ test('XPATH-002-sorting-functions-checking', async ({ page }) => {
    await page.goto('');
    await page.locator('xpath=//button[@data-testid="interactions-sort-name"]').click();
    await expect(page.locator('xpath=//button[contains(text(), "Тест")]/parent::th[@aria-sort="descending"]')).toBeVisible();
+   await expect(page.locator('xpath=(//tbody/tr[1][@data-testid="interactions-table-row-2"])')).toContainText('Створення статті');
    await page.locator('xpath=//button[@data-testid="interactions-sort-status"]').click();
    await expect(page.locator('xpath=//button[contains(text(), "Статус")]/parent::th[@aria-sort="ascending"]')).toBeVisible();
+   await expect(page.locator('xpath=(//tbody/tr[1]/td[3]/span)')).toContainText('Failed');
    await page.locator('xpath=//button[@data-testid="interactions-sort-duration"]').click();
    await expect(page.locator('xpath=//button[contains(text(), "Тривалість")]/parent::th[@aria-sort="ascending"]')).toBeVisible();
+   await expect(page.locator('xpath=(//tbody/tr[1][@data-testid="interactions-table-row-4"])')).toContainText('0.0');
 });
