@@ -53,6 +53,24 @@ export default defineConfig({
         testIdAttribute: 'data-test',
       },
     },
+    {
+      name: 'xpath-training',
+      testDir: 'tests/xpath-training',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'http://104.168.59.50/laboratory/interactions',
+        testIdAttribute: 'data-test',
+      },
+    },
+    {
+      name: 'variables-homework',
+      testDir: 'tests/variables-homework',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: '',
+        testIdAttribute: 'data-test',
+      },
+    },
 
     // {
     //   name: 'firefox',
