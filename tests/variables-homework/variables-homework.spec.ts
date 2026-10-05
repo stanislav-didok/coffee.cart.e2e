@@ -35,7 +35,7 @@ test('проведення звичайного замовлення', async ({ 
    await payButton.click();
    await testLocatorName.fill('Stanislav Test');
    await testLocatorEmail.fill('test@gm.com');
-   await testSubmitButton.click(); 
+   await testSubmitButton.click();
    await expect(successfulPaymentMessage).toBeVisible();
 });
 
@@ -73,7 +73,7 @@ test('товар зі знижкою все ще у корзині після в
    let cartLocator = page.locator('a[href="/cart"]');
    let removeItemsButton = page.locator('button[aria-label="Remove all Espresso"]');
    let discountItem = page.locator('ul:not(.cart-preview) > li.list-item > div:first-child');
-   
+
 
    await page.goto(baseUrl);
    await tesIdLocatorEspresso.click({ clickCount: 3 });
@@ -118,3 +118,7 @@ test('товар зі знижкою додається "+" у корзині н
    await addDiscountedItemButton.click();
    await expect(checkDiscountedItemQuantity).toHaveText('$4.00 x 2');
 });
+
+
+
+

@@ -71,6 +71,15 @@ export default defineConfig({
         testIdAttribute: 'data-test',
       },
     },
+    {
+      name: 'voting-age-homework',
+      testDir: 'tests/voting-age',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: '',
+        testIdAttribute: 'data-test',
+      },
+    },
 
     // {
     //   name: 'firefox',
