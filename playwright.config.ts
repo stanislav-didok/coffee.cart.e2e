@@ -80,6 +80,14 @@ export default defineConfig({
         testIdAttribute: 'data-test',
       },
     },
+    {
+      name: 'functions-practice',
+      testDir: 'tests/functions-practice',
+      use: {
+        ...devices['Desktop Chrome'],
+        testIdAttribute: 'data-test',
+      },
+    },
 
     // {
     //   name: 'firefox',

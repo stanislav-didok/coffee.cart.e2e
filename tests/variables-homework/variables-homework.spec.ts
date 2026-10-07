@@ -19,6 +19,8 @@ const baseUrl = 'https://coffee-cart.app/';
 //    return page.getByTestId(locatorId);
 // };
 
+
+
 test('проведення звичайного замовлення', async ({ page }) => {
 
    const payButton = page.locator('button.pay');
@@ -40,30 +42,16 @@ test('проведення звичайного замовлення', async ({ 
 });
 
 test('проведення замовлення з додатковим товаром зі знижкою', async ({ page }) => {
-
-   const tesIdLocatorEspressoMacchiato = page.getByTestId('Espresso_Macchiato');
-   const tesIdLocatorEspressoPanna = page.getByTestId('Espresso_Con Panna');
-   const tesIdLocatorAmericano = page.getByTestId('Americano');
-   const successfulPaymentMessage = page.getByText('Thanks for your purchase. Please check your email for payment.');
-   const payButton = page.locator('button.pay');
-   const yesButton = page.locator('button.yes');
-   let testLocatorName = page.locator('#name');
-   let testLocatorEmail = page.locator('#email');
-   let testPromotionCheck = page.locator('#promotion');
-   let testSubmitButton = page.locator('#submit-payment');
-
-   await page.goto(baseUrl);
-   await tesIdLocatorEspressoMacchiato.click();
-   await tesIdLocatorEspressoPanna.click();
-   await tesIdLocatorAmericano.click();
-   await yesButton.click();
-   await payButton.click();
-   await testLocatorName.fill('Stanislav Test');
-   await testLocatorEmail.fill('test@gm.com');
-   await testPromotionCheck.check();
-   await testSubmitButton.click();
-   await expect(successfulPaymentMessage).toBeVisible();
+   await page.goto('');
+   await page.locator('[data-test="Espresso"]').click();
+   await page.locator('[data-test="Americano"]').click();
+   await page.locator('button.pay').click();
+   await page.locator('#name').fill('Stanislav Test');
+   await page.locator('#email').fill('test@gm.com');
+   await page.locator('#submit-payment').click();
+   await expect(page.getByText('Thanks for your purchase. Please check your email for payment.')).toBeVisible();
 });
+
 
 
 test('товар зі знижкою все ще у корзині після видалення звичайних товарів', async ({ page }) => {
