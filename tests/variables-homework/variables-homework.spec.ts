@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
+// import { test, expect } from '@playwright/test';
 
-const baseUrl = 'https://coffee-cart.app/';
+// const baseUrl = 'https://coffee-cart.app/';
 
 // const extraCupYesButton = async (page) => {
 //    await page.locator('button.yes').click();
