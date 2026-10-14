@@ -97,6 +97,15 @@ export default defineConfig({
         testIdAttribute: 'data-testid',
       },
     },
+    {
+      name: 'contact-form',
+      testDir: 'tests/contact-form',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'http://104.168.59.50/articles/contact',
+        testIdAttribute: 'data-testid',
+      },
+    },
 
     // {
     //   name: 'firefox',
