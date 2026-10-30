@@ -1,0 +1,238 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "QA Dojo" [ref=e10] [cursor=pointer]:
+            - /url: /articles
+          - generic [ref=e11]: Testing articles
+        - link "← All modules" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /articles
+        - link "Sign in" [ref=e15] [cursor=pointer]:
+          - /url: /articles/login
+        - link "Register" [ref=e16] [cursor=pointer]:
+          - /url: /articles/register
+        - button "Toggle theme" [ref=e17] [cursor=pointer]: ☾
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - button "Global feed" [ref=e24] [cursor=pointer]
+          - generic [ref=e25]: 9 articles
+        - generic [ref=e26]:
+          - searchbox "Search headlines…" [ref=e27]
+          - combobox [ref=e28]:
+            - option "Newest first" [selected]
+            - option "Oldest first"
+            - option "Most favorited"
+          - generic [ref=e29] [cursor=pointer]:
+            - checkbox "With cover" [ref=e30]
+            - text: With cover
+          - generic [ref=e31]:
+            - button "Reset" [active] [ref=e32] [cursor=pointer]
+            - button "Apply" [ref=e33] [cursor=pointer]
+        - generic [ref=e230]:
+          - article [ref=e231]:
+            - generic [ref=e233]:
+              - link "olena · 20 October 2026 · Automation" [ref=e234] [cursor=pointer]:
+                - /url: /articles/profile/olena
+              - button "♥ 2" [ref=e235] [cursor=pointer]
+            - link [ref=e236] [cursor=pointer]:
+              - /url: /articles/article/yak-pisati-stabilni-selektori-dlya-ui-testiv
+              - heading "Як писати стабільні селектори для UI-тестів" [level=2] [ref=e237]
+              - paragraph [ref=e238]: П’ять правил, які допомогли нашій команді скоротити кількість випадкових падінь.
+            - generic [ref=e239]:
+              - link "Read on →" [ref=e240] [cursor=pointer]:
+                - /url: /articles/article/yak-pisati-stabilni-selektori-dlya-ui-testiv
+              - list [ref=e241]:
+                - listitem [ref=e242]: automation
+                - listitem [ref=e243]: best-practices
+                - listitem [ref=e244]: selectors
+          - article [ref=e245]:
+            - generic [ref=e246]:
+              - generic [ref=e247]:
+                - link "maksym · 18 October 2026 · Tools" [ref=e248] [cursor=pointer]:
+                  - /url: /articles/profile/maksym
+                - button "♥ 0" [ref=e249] [cursor=pointer]
+              - link [ref=e250] [cursor=pointer]:
+                - /url: /articles/article/ochikuvannya-u-webdriverio-bez-zajvih-sleep
+                - heading "Очікування у WebdriverIO без зайвих sleep" [level=2] [ref=e251]
+                - paragraph [ref=e252]: Як замінити фіксовані паузи на перевірку реального стану інтерфейсу.
+              - generic [ref=e253]:
+                - link "Read on →" [ref=e254] [cursor=pointer]:
+                  - /url: /articles/article/ochikuvannya-u-webdriverio-bez-zajvih-sleep
+                - list [ref=e255]:
+                  - listitem [ref=e256]: automation
+                  - listitem [ref=e257]: waits
+                  - listitem [ref=e258]: webdriverio
+          - article [ref=e260]:
+            - generic [ref=e261]:
+              - generic [ref=e262]:
+                - link "iryna · 15 October 2026 · Automation" [ref=e263] [cursor=pointer]:
+                  - /url: /articles/profile/iryna
+                - button "♥ 0" [ref=e264] [cursor=pointer]
+              - link [ref=e265] [cursor=pointer]:
+                - /url: /articles/article/izolyaciya-testovih-danih-u-paralelnomu-zapusku
+                - heading "Ізоляція тестових даних у паралельному запуску" [level=2] [ref=e266]
+                - paragraph [ref=e267]: Чому спільний тестовий акаунт одного дня обов’язково стане джерелом нестабільності.
+              - generic [ref=e268]:
+                - link "Read on →" [ref=e269] [cursor=pointer]:
+                  - /url: /articles/article/izolyaciya-testovih-danih-u-paralelnomu-zapusku
+                - list [ref=e270]:
+                  - listitem [ref=e271]: best-practices
+                  - listitem [ref=e272]: ci
+                  - listitem [ref=e273]: test-data
+          - article [ref=e275]:
+            - generic [ref=e276]:
+              - generic [ref=e277]:
+                - link "taras · 12 October 2026 · Tools" [ref=e278] [cursor=pointer]:
+                  - /url: /articles/profile/taras
+                - button "♥ 1" [ref=e279] [cursor=pointer]
+              - link [ref=e280] [cursor=pointer]:
+                - /url: /articles/article/shvidkij-ci-sho-mi-zminili-za-odin-sprint
+                - 'heading "Швидкий CI: що ми змінили за один спринт" [level=2] [ref=e281]'
+                - paragraph [ref=e282]: Три невеликі оптимізації скоротили перевірку pull request з 18 до 9 хвилин.
+              - generic [ref=e283]:
+                - link "Read on →" [ref=e284] [cursor=pointer]:
+                  - /url: /articles/article/shvidkij-ci-sho-mi-zminili-za-odin-sprint
+                - list [ref=e285]:
+                  - listitem [ref=e286]: ci
+                  - listitem [ref=e287]: devops
+                  - listitem [ref=e288]: performance
+          - article [ref=e290]:
+            - generic [ref=e291]:
+              - generic [ref=e292]:
+                - link "sofia · 9 October 2026 · General" [ref=e293] [cursor=pointer]:
+                  - /url: /articles/profile/sofia
+                - button "♥ 1" [ref=e294] [cursor=pointer]
+              - link [ref=e295] [cursor=pointer]:
+                - /url: /articles/article/perevirka-dostupnosti-yaku-mozhna-dodati-sogodni
+                - heading "Перевірка доступності, яку можна додати сьогодні" [level=2] [ref=e296]
+                - paragraph [ref=e297]: Невеликий smoke-набір для клавіатури, фокуса й доступних назв елементів.
+              - generic [ref=e298]:
+                - link "Read on →" [ref=e299] [cursor=pointer]:
+                  - /url: /articles/article/perevirka-dostupnosti-yaku-mozhna-dodati-sogodni
+                - list [ref=e300]:
+                  - listitem [ref=e301]: a11y
+                  - listitem [ref=e302]: accessibility
+                  - listitem [ref=e303]: testing
+          - article [ref=e305]:
+            - generic [ref=e306]:
+              - generic [ref=e307]:
+                - link "maksym · 5 October 2026 · Automation" [ref=e308] [cursor=pointer]:
+                  - /url: /articles/profile/maksym
+                - button "♥ 0" [ref=e309] [cursor=pointer]
+              - link [ref=e310] [cursor=pointer]:
+                - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+                - heading "Page Object без надмірної абстракції" [level=2] [ref=e311]
+                - paragraph [ref=e312]: Як залишити локатори в одному місці й не перетворити тести на власний фреймворк.
+              - generic [ref=e313]:
+                - link "Read on →" [ref=e314] [cursor=pointer]:
+                  - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+                - list [ref=e315]:
+                  - listitem [ref=e316]: best-practices
+                  - listitem [ref=e317]: page-object
+                  - listitem [ref=e318]: patterns
+          - article [ref=e319]:
+            - generic [ref=e320]:
+              - generic [ref=e321]:
+                - link "olena · 1 October 2026 · General" [ref=e322] [cursor=pointer]:
+                  - /url: /articles/profile/olena
+                - button "♥ 0" [ref=e323] [cursor=pointer]
+              - link [ref=e324] [cursor=pointer]:
+                - /url: /articles/article/sho-dodati-do-bag-reportu-krim-skrinshota
+                - heading "Що додати до баг-репорту, крім скриншота" [level=2] [ref=e325]
+                - paragraph [ref=e326]: Контекст, який допомагає відтворити проблему без довгого листування.
+              - generic [ref=e327]:
+                - link "Read on →" [ref=e328] [cursor=pointer]:
+                  - /url: /articles/article/sho-dodati-do-bag-reportu-krim-skrinshota
+                - list [ref=e329]:
+                  - listitem [ref=e330]: bug-report
+                  - listitem [ref=e331]: communication
+                  - listitem [ref=e332]: workflow
+          - article [ref=e333]:
+            - generic [ref=e334]:
+              - generic [ref=e335]:
+                - link "sofia · 26 September 2026 · General" [ref=e336] [cursor=pointer]:
+                  - /url: /articles/profile/sofia
+                - button "♥ 0" [ref=e337] [cursor=pointer]
+              - link [ref=e338] [cursor=pointer]:
+                - /url: /articles/article/pyat-pitan-pered-testuvannyam-novoyi-formi
+                - heading "П’ять питань перед тестуванням нової форми" [level=2] [ref=e339]
+                - paragraph [ref=e340]: Мінічекліст для вимог, валідації, помилок і поведінки після відправлення.
+              - generic [ref=e341]:
+                - link "Read on →" [ref=e342] [cursor=pointer]:
+                  - /url: /articles/article/pyat-pitan-pered-testuvannyam-novoyi-formi
+                - list [ref=e343]:
+                  - listitem [ref=e344]: checklist
+                  - listitem [ref=e345]: exploratory-testing
+                  - listitem [ref=e346]: forms
+          - article [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]:
+                - link "iryna · 22 September 2026 · News" [ref=e350] [cursor=pointer]:
+                  - /url: /articles/profile/iryna
+                - button "♥ 0" [ref=e351] [cursor=pointer]
+              - link [ref=e352] [cursor=pointer]:
+                - /url: /articles/article/chernetka-yak-obirati-scenariyi-dlya-smoke-naboru
+                - 'heading "Чернетка: як обирати сценарії для smoke-набору" [level=2] [ref=e353]'
+                - paragraph [ref=e354]: Нотатки до майбутньої статті про коротку й корисну перевірку релізу.
+              - generic [ref=e355]:
+                - link "Read on →" [ref=e356] [cursor=pointer]:
+                  - /url: /articles/article/chernetka-yak-obirati-scenariyi-dlya-smoke-naboru
+                - list [ref=e357]:
+                  - listitem [ref=e358]: drafts
+                  - listitem [ref=e359]: smoke-testing
+      - complementary [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Popular tags
+          - generic [ref=e168]:
+            - button "best-practices" [ref=e169] [cursor=pointer]
+            - button "automation" [ref=e170] [cursor=pointer]
+            - button "ci" [ref=e171] [cursor=pointer]
+            - button "a11y" [ref=e172] [cursor=pointer]
+            - button "accessibility" [ref=e173] [cursor=pointer]
+            - button "bug-report" [ref=e174] [cursor=pointer]
+            - button "checklist" [ref=e175] [cursor=pointer]
+            - button "communication" [ref=e176] [cursor=pointer]
+            - button "devops" [ref=e177] [cursor=pointer]
+            - button "drafts" [ref=e178] [cursor=pointer]
+            - button "exploratory-testing" [ref=e179] [cursor=pointer]
+            - button "forms" [ref=e180] [cursor=pointer]
+            - button "page-object" [ref=e181] [cursor=pointer]
+            - button "patterns" [ref=e182] [cursor=pointer]
+            - button "performance" [ref=e183] [cursor=pointer]
+            - button "selectors" [ref=e184] [cursor=pointer]
+            - button "smoke-testing" [ref=e185] [cursor=pointer]
+            - button "test-data" [ref=e186] [cursor=pointer]
+            - button "testing" [ref=e187] [cursor=pointer]
+            - button "waits" [ref=e188] [cursor=pointer]
+            - button "webdriverio" [ref=e189] [cursor=pointer]
+            - button "workflow" [ref=e190] [cursor=pointer]
+  - contentinfo [ref=e191]:
+    - generic [ref=e193]:
+      - navigation [ref=e195]:
+        - link "Home" [ref=e196] [cursor=pointer]:
+          - /url: /articles
+        - link "All modules" [ref=e197] [cursor=pointer]:
+          - /url: /
+        - link "Documentation" [ref=e198] [cursor=pointer]:
+          - /url: https://github.com
+        - link "Feedback" [ref=e199] [cursor=pointer]:
+          - /url: /articles/contact
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Subscribe to the digest
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - textbox "Your email" [ref=e204]
+            - button "Subscribe" [ref=e205] [cursor=pointer]
+          - group "Frequency" [ref=e206]:
+            - generic [ref=e208] [cursor=pointer]:
+              - radio "Daily"
+              - text: Daily
+            - generic [ref=e210] [cursor=pointer]:
+              - radio "Weekly" [checked]
+              - text: Weekly

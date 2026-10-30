@@ -1,0 +1,154 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "QA Dojo" [ref=e10] [cursor=pointer]:
+            - /url: /articles
+          - generic [ref=e11]: Testing articles
+        - link "← All modules" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /articles
+        - link "Sign in" [ref=e15] [cursor=pointer]:
+          - /url: /articles/login
+        - link "Register" [ref=e16] [cursor=pointer]:
+          - /url: /articles/register
+        - button "Toggle theme" [ref=e17] [cursor=pointer]: ☾
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - button "Global feed" [ref=e24] [cursor=pointer]
+          - generic [ref=e25]: 4 articles
+        - generic [ref=e26]:
+          - searchbox "Search headlines…" [ref=e27]: тест
+          - combobox [ref=e28]:
+            - option "Newest first"
+            - option "Oldest first" [selected]
+            - option "Most favorited"
+          - generic [ref=e29] [cursor=pointer]:
+            - checkbox "With cover" [ref=e30]
+            - text: With cover
+          - generic [ref=e31]:
+            - button "Reset" [ref=e32] [cursor=pointer]
+            - button "Apply" [active] [ref=e33] [cursor=pointer]
+        - generic [ref=e437]:
+          - article [ref=e438]:
+            - generic [ref=e439]:
+              - link "sofia · 26 September 2026 · General" [ref=e440] [cursor=pointer]:
+                - /url: /articles/profile/sofia
+              - button "♥ 0" [ref=e441] [cursor=pointer]
+            - link [ref=e442] [cursor=pointer]:
+              - /url: /articles/article/pyat-pitan-pered-testuvannyam-novoyi-formi
+              - heading "П’ять питань перед тестуванням нової форми" [level=2] [ref=e443]
+              - paragraph [ref=e444]: Мінічекліст для вимог, валідації, помилок і поведінки після відправлення.
+            - generic [ref=e445]:
+              - link "Read on →" [ref=e446] [cursor=pointer]:
+                - /url: /articles/article/pyat-pitan-pered-testuvannyam-novoyi-formi
+              - list [ref=e447]:
+                - listitem [ref=e448]: checklist
+                - listitem [ref=e449]: exploratory-testing
+                - listitem [ref=e450]: forms
+          - article [ref=e451]:
+            - generic [ref=e452]:
+              - generic [ref=e453]:
+                - link "maksym · 5 October 2026 · Automation" [ref=e454] [cursor=pointer]:
+                  - /url: /articles/profile/maksym
+                - button "♥ 0" [ref=e455] [cursor=pointer]
+              - link [ref=e456] [cursor=pointer]:
+                - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+                - heading "Page Object без надмірної абстракції" [level=2] [ref=e457]
+                - paragraph [ref=e458]: Як залишити локатори в одному місці й не перетворити тести на власний фреймворк.
+              - generic [ref=e459]:
+                - link "Read on →" [ref=e460] [cursor=pointer]:
+                  - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+                - list [ref=e461]:
+                  - listitem [ref=e462]: best-practices
+                  - listitem [ref=e463]: page-object
+                  - listitem [ref=e464]: patterns
+          - article [ref=e465]:
+            - generic [ref=e466]:
+              - generic [ref=e467]:
+                - link "iryna · 15 October 2026 · Automation" [ref=e468] [cursor=pointer]:
+                  - /url: /articles/profile/iryna
+                - button "♥ 0" [ref=e469] [cursor=pointer]
+              - link [ref=e470] [cursor=pointer]:
+                - /url: /articles/article/izolyaciya-testovih-danih-u-paralelnomu-zapusku
+                - heading "Ізоляція тестових даних у паралельному запуску" [level=2] [ref=e471]
+                - paragraph [ref=e472]: Чому спільний тестовий акаунт одного дня обов’язково стане джерелом нестабільності.
+              - generic [ref=e473]:
+                - link "Read on →" [ref=e474] [cursor=pointer]:
+                  - /url: /articles/article/izolyaciya-testovih-danih-u-paralelnomu-zapusku
+                - list [ref=e475]:
+                  - listitem [ref=e476]: best-practices
+                  - listitem [ref=e477]: ci
+                  - listitem [ref=e478]: test-data
+          - article [ref=e480]:
+            - generic [ref=e481]:
+              - generic [ref=e482]:
+                - link "olena · 20 October 2026 · Automation" [ref=e483] [cursor=pointer]:
+                  - /url: /articles/profile/olena
+                - button "♥ 2" [ref=e484] [cursor=pointer]
+              - link [ref=e485] [cursor=pointer]:
+                - /url: /articles/article/yak-pisati-stabilni-selektori-dlya-ui-testiv
+                - heading "Як писати стабільні селектори для UI-тестів" [level=2] [ref=e486]
+                - paragraph [ref=e487]: П’ять правил, які допомогли нашій команді скоротити кількість випадкових падінь.
+              - generic [ref=e488]:
+                - link "Read on →" [ref=e489] [cursor=pointer]:
+                  - /url: /articles/article/yak-pisati-stabilni-selektori-dlya-ui-testiv
+                - list [ref=e490]:
+                  - listitem [ref=e491]: automation
+                  - listitem [ref=e492]: best-practices
+                  - listitem [ref=e493]: selectors
+      - complementary [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Popular tags
+          - generic [ref=e168]:
+            - button "best-practices" [ref=e169] [cursor=pointer]
+            - button "automation" [ref=e170] [cursor=pointer]
+            - button "ci" [ref=e171] [cursor=pointer]
+            - button "a11y" [ref=e172] [cursor=pointer]
+            - button "accessibility" [ref=e173] [cursor=pointer]
+            - button "bug-report" [ref=e174] [cursor=pointer]
+            - button "checklist" [ref=e175] [cursor=pointer]
+            - button "communication" [ref=e176] [cursor=pointer]
+            - button "devops" [ref=e177] [cursor=pointer]
+            - button "drafts" [ref=e178] [cursor=pointer]
+            - button "exploratory-testing" [ref=e179] [cursor=pointer]
+            - button "forms" [ref=e180] [cursor=pointer]
+            - button "page-object" [ref=e181] [cursor=pointer]
+            - button "patterns" [ref=e182] [cursor=pointer]
+            - button "performance" [ref=e183] [cursor=pointer]
+            - button "selectors" [ref=e184] [cursor=pointer]
+            - button "smoke-testing" [ref=e185] [cursor=pointer]
+            - button "test-data" [ref=e186] [cursor=pointer]
+            - button "testing" [ref=e187] [cursor=pointer]
+            - button "waits" [ref=e188] [cursor=pointer]
+            - button "webdriverio" [ref=e189] [cursor=pointer]
+            - button "workflow" [ref=e190] [cursor=pointer]
+  - contentinfo [ref=e191]:
+    - generic [ref=e193]:
+      - navigation [ref=e195]:
+        - link "Home" [ref=e196] [cursor=pointer]:
+          - /url: /articles
+        - link "All modules" [ref=e197] [cursor=pointer]:
+          - /url: /
+        - link "Documentation" [ref=e198] [cursor=pointer]:
+          - /url: https://github.com
+        - link "Feedback" [ref=e199] [cursor=pointer]:
+          - /url: /articles/contact
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Subscribe to the digest
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - textbox "Your email" [ref=e204]
+            - button "Subscribe" [ref=e205] [cursor=pointer]
+          - group "Frequency" [ref=e206]:
+            - generic [ref=e208] [cursor=pointer]:
+              - radio "Daily"
+              - text: Daily
+            - generic [ref=e210] [cursor=pointer]:
+              - radio "Weekly" [checked]
+              - text: Weekly

@@ -1,0 +1,105 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "QA Dojo" [ref=e10] [cursor=pointer]:
+            - /url: /articles
+          - generic [ref=e11]: Testing articles
+        - link "← All modules" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /articles
+        - link "Sign in" [ref=e15] [cursor=pointer]:
+          - /url: /articles/login
+        - link "Register" [active] [ref=e16] [cursor=pointer]:
+          - /url: /articles/register
+        - button "Toggle theme" [ref=e17] [cursor=pointer]: ☾
+  - main [ref=e19]:
+    - generic [ref=e236]:
+      - generic [ref=e237]:
+        - paragraph [ref=e238]: Join the paper
+        - heading "Create an account" [level=1] [ref=e239]
+        - paragraph [ref=e240]:
+          - text: Already have an account?
+          - link "Sign in" [ref=e241] [cursor=pointer]:
+            - /url: /articles/login
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - generic [ref=e244]: Username
+            - textbox "Username" [ref=e245]:
+              - /placeholder: kate.lyn
+          - generic [ref=e246]:
+            - generic [ref=e247]: Email
+            - textbox "Email" [ref=e248]:
+              - /placeholder: you@example.com
+          - generic [ref=e249]:
+            - generic [ref=e250]: Password
+            - textbox "Password" [ref=e251]:
+              - /placeholder: ••••••••
+          - generic [ref=e252]:
+            - generic [ref=e253]: Repeat password
+            - textbox "Repeat password" [ref=e254]:
+              - /placeholder: ••••••••
+          - generic [ref=e255]:
+            - generic [ref=e256]: Country
+            - combobox "Country" [ref=e257]:
+              - option "Ukraine" [selected]
+              - option "Poland"
+              - option "Germany"
+              - option "United States"
+              - option "Other"
+          - group "How did you hear about us?" [ref=e258]:
+            - generic [ref=e260]:
+              - generic [ref=e261] [cursor=pointer]:
+                - radio "Search" [checked]
+                - text: Search
+              - generic [ref=e263] [cursor=pointer]:
+                - radio "A colleague recommended it"
+                - text: A colleague recommended it
+              - generic [ref=e265] [cursor=pointer]:
+                - radio "Social media"
+                - text: Social media
+              - generic [ref=e267] [cursor=pointer]:
+                - radio "A testing course"
+                - text: A testing course
+          - generic [ref=e269] [cursor=pointer]:
+            - checkbox "Send me the weekly digest of new articles" [checked] [ref=e270]
+            - text: Send me the weekly digest of new articles
+          - generic [ref=e271] [cursor=pointer]:
+            - checkbox "I agree to the terms of use" [ref=e272]
+            - text: I agree to the terms of use
+          - button "Create account" [disabled] [ref=e273]
+      - complementary [ref=e274]:
+        - paragraph [ref=e275]: Demo credentials
+        - generic [ref=e276]:
+          - term [ref=e277]: Email
+          - definition [ref=e278]: olena@example.com
+          - term [ref=e279]: Password
+          - definition [ref=e280]: password
+        - paragraph [ref=e281]: All data is demonstrative and resets on request. Every field on this form carries a stable test id.
+  - contentinfo [ref=e191]:
+    - generic [ref=e193]:
+      - navigation [ref=e195]:
+        - link "Home" [ref=e196] [cursor=pointer]:
+          - /url: /articles
+        - link "All modules" [ref=e197] [cursor=pointer]:
+          - /url: /
+        - link "Documentation" [ref=e198] [cursor=pointer]:
+          - /url: https://github.com
+        - link "Feedback" [ref=e199] [cursor=pointer]:
+          - /url: /articles/contact
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Subscribe to the digest
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - textbox "Your email" [ref=e204]
+            - button "Subscribe" [ref=e205] [cursor=pointer]
+          - group "Frequency" [ref=e206]:
+            - generic [ref=e208] [cursor=pointer]:
+              - radio "Daily"
+              - text: Daily
+            - generic [ref=e210] [cursor=pointer]:
+              - radio "Weekly" [checked]
+              - text: Weekly
