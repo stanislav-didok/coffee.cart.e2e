@@ -106,6 +106,15 @@ export default defineConfig({
         testIdAttribute: 'data-testid',
       },
     },
+    {
+      name: 'practice-oop',
+      testDir: 'tests/practice-oop',
+      use: {
+        ...devices['Desktop Chrome'],
+        baseURL: 'https://www.saucedemo.com',
+        testIdAttribute: 'data-test',
+      },
+    },
 
     // {
     //   name: 'firefox',
