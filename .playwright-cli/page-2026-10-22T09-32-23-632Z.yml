@@ -1,0 +1,102 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - link "QA Dojo" [ref=e10] [cursor=pointer]:
+            - /url: /articles
+          - generic [ref=e11]: Testing articles
+        - link "← All modules" [ref=e12] [cursor=pointer]:
+          - /url: /
+      - navigation [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /articles
+        - link "Sign in" [ref=e15] [cursor=pointer]:
+          - /url: /articles/login
+        - link "Register" [ref=e16] [cursor=pointer]:
+          - /url: /articles/register
+        - button "Toggle theme" [ref=e17] [cursor=pointer]: ☾
+  - main [ref=e19]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - button "Global feed" [ref=e24] [cursor=pointer]
+          - generic [ref=e25]: 1 article
+        - generic [ref=e26]:
+          - searchbox "Search headlines…" [ref=e27]: PAGE object
+          - combobox [ref=e28]:
+            - option "Newest first" [selected]
+            - option "Oldest first"
+            - option "Most favorited"
+          - generic [ref=e29] [cursor=pointer]:
+            - checkbox "With cover" [ref=e30]
+            - text: With cover
+          - generic [ref=e31]:
+            - button "Reset" [ref=e32] [cursor=pointer]
+            - button "Apply" [active] [ref=e33] [cursor=pointer]
+        - article [ref=e362]:
+          - generic [ref=e363]:
+            - link "maksym · 5 October 2026 · Automation" [ref=e364] [cursor=pointer]:
+              - /url: /articles/profile/maksym
+            - button "♥ 0" [ref=e365] [cursor=pointer]
+          - link [ref=e366] [cursor=pointer]:
+            - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+            - heading "Page Object без надмірної абстракції" [level=2] [ref=e367]
+            - paragraph [ref=e368]: Як залишити локатори в одному місці й не перетворити тести на власний фреймворк.
+          - generic [ref=e369]:
+            - link "Read on →" [ref=e370] [cursor=pointer]:
+              - /url: /articles/article/page-object-bez-nadmirnoyi-abstrakciyi
+            - list [ref=e371]:
+              - listitem [ref=e372]: best-practices
+              - listitem [ref=e373]: page-object
+              - listitem [ref=e374]: patterns
+      - complementary [ref=e165]:
+        - generic [ref=e166]:
+          - paragraph [ref=e167]: Popular tags
+          - generic [ref=e168]:
+            - button "best-practices" [ref=e169] [cursor=pointer]
+            - button "automation" [ref=e170] [cursor=pointer]
+            - button "ci" [ref=e171] [cursor=pointer]
+            - button "a11y" [ref=e172] [cursor=pointer]
+            - button "accessibility" [ref=e173] [cursor=pointer]
+            - button "bug-report" [ref=e174] [cursor=pointer]
+            - button "checklist" [ref=e175] [cursor=pointer]
+            - button "communication" [ref=e176] [cursor=pointer]
+            - button "devops" [ref=e177] [cursor=pointer]
+            - button "drafts" [ref=e178] [cursor=pointer]
+            - button "exploratory-testing" [ref=e179] [cursor=pointer]
+            - button "forms" [ref=e180] [cursor=pointer]
+            - button "page-object" [ref=e181] [cursor=pointer]
+            - button "patterns" [ref=e182] [cursor=pointer]
+            - button "performance" [ref=e183] [cursor=pointer]
+            - button "selectors" [ref=e184] [cursor=pointer]
+            - button "smoke-testing" [ref=e185] [cursor=pointer]
+            - button "test-data" [ref=e186] [cursor=pointer]
+            - button "testing" [ref=e187] [cursor=pointer]
+            - button "waits" [ref=e188] [cursor=pointer]
+            - button "webdriverio" [ref=e189] [cursor=pointer]
+            - button "workflow" [ref=e190] [cursor=pointer]
+  - contentinfo [ref=e191]:
+    - generic [ref=e193]:
+      - navigation [ref=e195]:
+        - link "Home" [ref=e196] [cursor=pointer]:
+          - /url: /articles
+        - link "All modules" [ref=e197] [cursor=pointer]:
+          - /url: /
+        - link "Documentation" [ref=e198] [cursor=pointer]:
+          - /url: https://github.com
+        - link "Feedback" [ref=e199] [cursor=pointer]:
+          - /url: /articles/contact
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Subscribe to the digest
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - textbox "Your email" [ref=e204]
+            - button "Subscribe" [ref=e205] [cursor=pointer]
+          - group "Frequency" [ref=e206]:
+            - generic [ref=e208] [cursor=pointer]:
+              - radio "Daily"
+              - text: Daily
+            - generic [ref=e210] [cursor=pointer]:
+              - radio "Weekly" [checked]
+              - text: Weekly
