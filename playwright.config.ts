@@ -1,18 +1,18 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import dotenv from "dotenv";
+import path from "path";
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -22,97 +22,106 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    actionTimeout: 30 * 1000
+    trace: "on-first-retry",
+    actionTimeout: 30 * 1000,
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'coffee-cart',
-      testDir: 'tests/coffee-cart',
+      name: "coffee-cart",
+      testDir: "tests/coffee-cart",
       use: {
-        ...devices['Desktop Chrome'],
+        ...devices["Desktop Chrome"],
         baseURL: "https://coffee-cart.app/",
         testIdAttribute: "data-test",
       },
     },
     {
-      name: 'aria-attributes',
-      testDir: 'tests/aria-attributes',
+      name: "aria-attributes",
+      testDir: "tests/aria-attributes",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'http://104.168.59.50/laboratory/aria/',
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50/laboratory/aria/",
+        testIdAttribute: "data-test",
       },
     },
     {
-      name: 'xpath-training',
-      testDir: 'tests/xpath-training',
+      name: "xpath-training",
+      testDir: "tests/xpath-training",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'http://104.168.59.50/laboratory/interactions',
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50/laboratory/interactions",
+        testIdAttribute: "data-test",
       },
     },
     {
-      name: 'variables-homework',
-      testDir: 'tests/variables-homework',
+      name: "variables-homework",
+      testDir: "tests/variables-homework",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: '',
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        baseURL: "",
+        testIdAttribute: "data-test",
       },
     },
     {
-      name: 'voting-age-homework',
-      testDir: 'tests/voting-age',
+      name: "voting-age-homework",
+      testDir: "tests/voting-age",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: '',
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        baseURL: "",
+        testIdAttribute: "data-test",
       },
     },
     {
-      name: 'functions-practice',
-      testDir: 'tests/functions-practice',
+      name: "functions-practice",
+      testDir: "tests/functions-practice",
       use: {
-        ...devices['Desktop Chrome'],
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        testIdAttribute: "data-test",
       },
     },
     {
-      name: 'articles-creating',
-      testDir: 'tests/articles-creating',
+      name: "articles-creating",
+      testDir: "tests/articles-creating",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'http://104.168.59.50/articles',
-        testIdAttribute: 'data-testid',
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50/articles",
+        testIdAttribute: "data-testid",
       },
     },
     {
-      name: 'contact-form',
-      testDir: 'tests/contact-form',
+      name: "contact-form",
+      testDir: "tests/contact-form",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'http://104.168.59.50/articles/contact',
-        testIdAttribute: 'data-testid',
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50/articles/contact",
+        testIdAttribute: "data-testid",
       },
     },
     {
-      name: 'practice-oop',
-      testDir: 'tests/practice-oop',
+      name: "practice-oop",
+      testDir: "tests/practice-oop",
       use: {
-        ...devices['Desktop Chrome'],
-        baseURL: 'https://www.saucedemo.com',
-        testIdAttribute: 'data-test',
+        ...devices["Desktop Chrome"],
+        baseURL: "https://www.saucedemo.com",
+        testIdAttribute: "data-test",
+      },
+    },
+    {
+      name: "fixture",
+      testDir: "tests/fixture",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "https://www.saucedemo.com",
+        testIdAttribute: "data-test",
       },
     },
 
