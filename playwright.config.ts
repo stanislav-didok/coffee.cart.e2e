@@ -17,6 +17,8 @@ export default defineConfig({
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
+  /* Global Setup*/
+  globalSetup: "./globalSetup.ts",
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
@@ -31,6 +33,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
     actionTimeout: 30 * 1000,
+    testIdAttribute: "data-test",
   },
 
   /* Configure projects for major browsers */
@@ -122,6 +125,15 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
         baseURL: "https://www.saucedemo.com",
         testIdAttribute: "data-test",
+      },
+    },
+    {
+      name: "cookies-and-storage",
+      testDir: "tests/cookies-and-storages-testing",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50/articles/",
+        testIdAttribute: "data-testid",
       },
     },
 
