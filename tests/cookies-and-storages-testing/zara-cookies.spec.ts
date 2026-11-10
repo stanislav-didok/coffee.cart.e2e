@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test.use({ storageState: { cookies: [], origins: [] }, headless: false });
+test.use({ storageState: { cookies: [], origins: [] } });
 
 test("прийняття та зміна cookies", async ({ page, context }) => {
   await page.goto("https://www.zara.com/es/en/");
