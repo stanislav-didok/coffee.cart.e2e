@@ -134,6 +134,27 @@ export default defineConfig({
         ...devices["Desktop Chrome"],
         baseURL: "http://104.168.59.50/articles/",
         testIdAttribute: "data-testid",
+        storageState: "./storageState.json",
+      },
+    },
+    {
+      name: "api-project-api",
+      testDir: "tests/api-project/api",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50",
+        testIdAttribute: "data-testid",
+        //storageState: "./storageState.json",
+      },
+    },
+    {
+      name: "api-project-e2e",
+      testDir: "tests/api-project/e2e",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50",
+        testIdAttribute: "data-testid",
+        //storageState: "./storageState.json",
       },
     },
 
