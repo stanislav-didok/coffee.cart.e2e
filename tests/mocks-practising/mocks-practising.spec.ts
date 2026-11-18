@@ -9,19 +9,6 @@ test("article title is replaced in request before it is sent", async ({
   const typedTitle = "Test.Title.123";
   const mockedTitle = faker.lorem.words(5);
 
-  const postData = {
-    article: {
-      title: mockedTitle,
-      description: "test",
-      body: "test",
-      tagList: [],
-      category: "general",
-      visibility: "public",
-      allowComments: true,
-      cover: "",
-    },
-  };
-
   await page.route(
     (url) => url.pathname === "/api/articles",
     async (route, request) => {
@@ -30,7 +17,9 @@ test("article title is replaced in request before it is sent", async ({
         return;
       }
 
-      await route.continue({ postData });
+      const body = request.postDataJSON();
+      body.article.title = mockedTitle;
+      await route.continue({ postData: body });
     },
   );
 
