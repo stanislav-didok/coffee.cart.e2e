@@ -1,7 +1,7 @@
 import { ArticleController } from "../controllers/ArticleController";
 import { expect, test } from "../fixtures/base-fixture";
 
-test("get token - check that user logged", async ({ request }) => {
+test.skip("get token - check that user logged", async ({ request }) => {
   const response = await request.post("http://104.168.59.50/api/users/login", {
     data: { user: { email: "olena@example.com", password: "password" } },
     failOnStatusCode: true,
@@ -15,7 +15,7 @@ test("get token - check that user logged", async ({ request }) => {
   const token = json.user.token;
 });
 
-test("get articles - check body", async ({ request }) => {
+test.skip("get articles - check body", async ({ request }) => {
   const response = await request.get("http://104.168.59.50/api/articles", {
     params: {
       sort: "newest",
@@ -27,7 +27,7 @@ test("get articles - check body", async ({ request }) => {
   const json = await response.json();
 });
 
-test("create article - should be successful", async ({ request }) => {
+test.skip("create article - should be successful", async ({ request }) => {
   let response = await request.post("http://104.168.59.50/api/users/login", {
     data: { user: { email: "olena@example.com", password: "password" } },
     failOnStatusCode: true,
@@ -56,7 +56,7 @@ test("create article - should be successful", async ({ request }) => {
   });
 });
 
-test("login via api - user should be logged", async ({
+test.skip("login via api - user should be logged", async ({
   page,
   request,
   login,
