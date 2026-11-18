@@ -157,6 +157,16 @@ export default defineConfig({
         //storageState: "./storageState.json",
       },
     },
+    {
+      name: "mocks-practising",
+      testDir: "tests/mocks-practising",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: "http://104.168.59.50",
+        testIdAttribute: "data-testid",
+        //storageState: "./storageState.json",
+      },
+    },
 
     // {
     //   name: 'firefox',

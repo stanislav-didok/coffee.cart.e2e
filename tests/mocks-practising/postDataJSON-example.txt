@@ -1,0 +1,89 @@
+ПРИКЛАД: заміна title через request.postDataJSON() замість ручного postData
+==========================================================================
+
+Ідея
+----
+Зараз у тесті об'єкт postData написаний вручну (усі поля article).
+Замість цього обробник route читає ТЕ, що реально відправила форма,
+змінює в цьому тільки title і відправляє далі. Структура запиту
+(description, body, category, ...) зберігається сама.
+
+
+Що змінюється в тесті
+---------------------
+1. Видалити ручний об'єкт postData (const postData = { article: {...} }).
+2. Обробник page.route переписати, як нижче.
+3. Решта (goto, fill, click, expect) лишається без змін.
+
+
+Повний приклад
+--------------
+
+import { faker } from "@faker-js/faker";
+import { expect, test } from "../api-project/fixtures/base-fixture";
+
+test("article title is replaced in request before it is sent", async ({
+  page,
+  register,
+  login,
+}) => {
+  const typedTitle = "Test.Title.123";   // вводимо у форму
+  const mockedTitle = faker.lorem.words(5); // підставляємо в запит
+
+  await page.route(
+    (url) => url.pathname === "/api/articles",
+    async (route, request) => {
+      // 1. Не POST — пропускаємо без змін і виходимо
+      if (request.method() !== "POST") {
+        await route.continue();
+        return;
+      }
+
+      // 2. Читаємо реальне тіло запиту (те, що сформувала форма)
+      const body = request.postDataJSON();
+
+      // 3. Змінюємо тільки title (він лежить усередині article)
+      body.article.title = mockedTitle;
+
+      // 4. Відправляємо змінене тіло на сервер
+      await route.continue({ postData: body });
+    },
+  );
+
+  await page.goto("/articles/editor");
+  await page.getByTestId("nav-new-article").click();
+  await page.getByTestId("editor-title").fill(typedTitle);
+  await page.getByTestId("editor-description").fill("test");
+  await page.getByTestId("editor-body").fill("test");
+  await page.getByTestId("editor-submit").click();
+
+  await expect(page.getByText(mockedTitle)).toBeVisible();
+});
+
+
+Пояснення по рядках обробника
+-----------------------------
+request.postDataJSON()
+    Повертає тіло запиту як звичайний JS-об'єкт. Аргументів не приймає.
+    До моменту, коли спрацьовує обробник, у ньому вже лежить typedTitle
+    (його туди поклала форма).
+
+body.article.title = mockedTitle;
+    Звичайне присвоєння властивості об'єкта. Шлях такий самий, як у JSON
+    з DevTools: article -> title.
+
+route.continue({ postData: body })
+    Відправляє запит на сервер, але вже з нашим тілом. Передаємо тільки
+    postData; method, url та headers лишаються як були.
+
+return після першого continue()
+    Потрібен, щоб не дійти до другого continue(): один запит можна
+    завершити лише один раз (інакше помилка "Route is already handled").
+
+
+Типові помилки
+--------------
+- Читати postDataJSON() ДО перевірки методу: для GET тіла немає.
+- Забути return у гілці "не POST".
+- Підставити typedTitle замість mockedTitle (тоді підміни не буде).
+- Викликати postDataJSON(typedTitle) з аргументом — метод їх не приймає.
